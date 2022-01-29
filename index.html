@@ -19,8 +19,8 @@
 
             <main>
                 <ul class="list-group" role="button" v-if="tasks.length">
-                    <li v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between">
-                        <div>{{ task.text }}</div>
+                    <li v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between" @click="toggleTask(index)">
+                        <div :class="{done: task.done}">{{ task.text }}</div>
                         <button class="list-button" @click="clearTask(index)">
                             <i class="fas fa-times"></i>
                         </button>

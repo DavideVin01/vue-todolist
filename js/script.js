@@ -32,6 +32,13 @@ const root = new Vue({
                 if (i === index) return false;
                 else return true;
             });
+        },
+        toggleTask(index){
+            // let currentTask = this.tasks[index].done;
+            // currentTask = !currentTask;
+            if (this.tasks[index].done = !this.tasks[index].done){
+                return true;
+            }
         }
     },
 });

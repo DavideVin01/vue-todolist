@@ -12,14 +12,17 @@
 <body id="test">
     <div id="root">
         <div class="container">
-            <h1 class="text-center text-big">TODO LIST</h1>
+            <header>
+                <h1 class="text-center text-big">TODO LIST</h1>
+            </header>
 
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Text input with checkbox">
-                <div class="input-group-text">
-                    <input class="form-check-input mt-0" type="checkbox">
-                </div>
-            </div>
+            <main>
+                <ul class="list-group" role="button">
+                    <li v-for="(task, index) in tasks" class="list-group-item">
+                        {{ task.text }}
+                    </li>
+                </ul>
+            </main>
             
         </div>
     </div>

@@ -18,7 +18,7 @@ Vue.config.devtools = true;
 const root = new Vue({
     el: '#root',
     data: {
-        task:[
+        tasks:[
             {text: 'Lavare i piatti', done: false},
             {text: 'Portare fuori il cane', done: false},
             {text: 'Studiare', done: false},
@@ -27,6 +27,6 @@ const root = new Vue({
         ],
     },
     methods: {
-        
+
     }
 });

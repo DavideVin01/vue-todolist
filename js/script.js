@@ -19,14 +19,19 @@ const root = new Vue({
     el: '#root',
     data: {
         tasks:[
-            {text: 'Lavare i piatti', done: false},
+            {text: 'Lavare i piatti', done: true},
             {text: 'Portare fuori il cane', done: false},
             {text: 'Studiare', done: false},
-            {text: 'Stendere i panni', done: false},
+            {text: 'Stendere i panni', done: true},
             {text: 'Fare la spesa', done: false},
         ],
     },
     methods: {
-
-    }
+        clearTask(index){
+            this.tasks = this.tasks.filter((task, i) => {
+                if (i === index) return false;
+                else return true;
+            });
+        }
+    },
 });

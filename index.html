@@ -21,7 +21,7 @@
                 <ul class="list-group" role="button">
                     <li v-if="{underline: task.done}" v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between">
                         <div>{{ task.text }}</div>
-                        <button @click="clearTask(index)">
+                        <button class="list-button" @click="clearTask(index)">
                             <i class="fas fa-times"></i>
                         </button>
                     </li>

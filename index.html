@@ -18,14 +18,15 @@
             </header>
 
             <main>
-                <ul class="list-group" role="button">
-                    <li v-if="{underline: task.done}" v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between">
+                <ul class="list-group" role="button" v-if="tasks.length">
+                    <li v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between">
                         <div>{{ task.text }}</div>
                         <button class="list-button" @click="clearTask(index)">
                             <i class="fas fa-times"></i>
                         </button>
                     </li>
                 </ul>
+                <h2 class="text-center" v-else>Non ci sono attività da svolgere.</h2>
             </main>
             
         </div>

@@ -18,6 +18,11 @@
             </header>
 
             <main>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Inserisci una nuova attività" v-model="newTask">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask">Aggiungi</button>
+                  </div>
+
                 <ul class="list-group" role="button" v-if="tasks.length">
                     <li v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between" @click="toggleTask(index)">
                         <div :class="{done: task.done}">{{ task.text }}</div>

@@ -19,10 +19,10 @@ const root = new Vue({
     el: '#root',
     data: {
         tasks:[
-            {text: 'Lavare i piatti', done: true},
+            {text: 'Lavare i piatti', done: false},
             {text: 'Portare fuori il cane', done: false},
             {text: 'Studiare', done: false},
-            {text: 'Stendere i panni', done: true},
+            {text: 'Stendere i panni', done: false},
             {text: 'Fare la spesa', done: false},
         ],
     },
@@ -34,11 +34,16 @@ const root = new Vue({
             });
         },
         toggleTask(index){
-            // let currentTask = this.tasks[index].done;
-            // currentTask = !currentTask;
             if (this.tasks[index].done = !this.tasks[index].done){
                 return true;
             }
+        },
+        addTask(){
+            const newTask = this.newTask.trim();
+            if (newTask){
+                this.tasks.push({ text: newTask, done: false });
+            }
+            this.newTask = '';
         }
     },
 });
